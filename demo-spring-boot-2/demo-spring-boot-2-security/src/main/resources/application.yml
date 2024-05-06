@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: demo-spring-boot-2-security
+
+keycloak:
+  realm: demo
+  auth-server-url: https://st.auth.itc.gov.mn/auth
+  resource: demo-spring-boot-2-security
+  principal-attribute: preferred_username
+  public-client: true
+#  bearer-only: true
+
+# Хэрэв client role хэрэглэнэ гэвэл use-resource-role-mappings=true
+# харин global role хэрэглэнэ гэвэл use-resource-role-mappings=false утгатай байна.
+  use-resource-role-mappings: true
+
+server:
+  port: 8081

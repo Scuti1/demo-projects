@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: demo-spring-boot-2-rabbitmq
+
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin@123
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+        max-concurrency: 20
+        concurrency: 10
+
+server:
+  port: 8083
